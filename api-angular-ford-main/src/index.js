@@ -49,7 +49,7 @@ app.get("/vehicles", (req, res) => {
                 connected: 500,
                 softwareUpdates: 750,
                 vin: "2FRHDUYS2Y63NHD22454",
-                img: "http://localhost:3001/ranger.png"
+                img: "https://api-projeto-final-2-0.onrender.com/ranger.png"
             },
             {
                 id: 2,
@@ -58,7 +58,7 @@ app.get("/vehicles", (req, res) => {
                 connected: 600,
                 softwareUpdates: 310,
                 vin: "2RFAASOYS4E4HDU34875",
-                img: "http://localhost:3001/mustang.png"
+                img: "https://api-projeto-final-2-0.onrender.com/mustang.png"
             },
             {
                 id: 3,
@@ -67,7 +67,7 @@ app.get("/vehicles", (req, res) => {
                 connected: 270,
                 softwareUpdates: 970,
                 vin: "1GKFK16K0RJ736886",
-                img: "http://localhost:3001/territory.png"
+                img: "https://api-projeto-final-2-0.onrender.com/territory.png"
             },
             {
                 id: 4,
@@ -76,7 +76,7 @@ app.get("/vehicles", (req, res) => {
                 connected: 310,
                 softwareUpdates: 290,
                 vin: "JH4DA9350PS016433",
-                img: "http://localhost:3001/broncoSport.png"
+                img: "https://api-projeto-final-2-0.onrender.com/broncoSport.png"
             }
         ];
 
@@ -149,5 +149,5 @@ app.post("/vehicleData", (req, res) => {
 })
 
 app.listen(3001, () => {
-    console.log("http://localhost:3001/");
+    console.log("https://api-projeto-final-2-0.onrender.com/");
 });
