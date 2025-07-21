@@ -41,6 +41,7 @@ app.post("/login", (req, res) => {
 
 app.get("/vehicles", (req, res) => {
     try {
+        const baseUrl = `${req.protocol}://${req.get("host")}`;
         const vehicles = [
             {
                 id: 1,
@@ -49,7 +50,7 @@ app.get("/vehicles", (req, res) => {
                 connected: 500,
                 softwareUpdates: 750,
                 vin: "2FRHDUYS2Y63NHD22454",
-                img: "https://api-projeto-final-2-0.onrender.com/ranger.png"
+                img: `${baseUrl}/ranger.png`
             },
             {
                 id: 2,
@@ -58,7 +59,7 @@ app.get("/vehicles", (req, res) => {
                 connected: 600,
                 softwareUpdates: 310,
                 vin: "2RFAASOYS4E4HDU34875",
-                img: "https://api-projeto-final-2-0.onrender.com/mustang.png"
+                img: `${baseUrl}/mustang.png`
             },
             {
                 id: 3,
@@ -67,7 +68,7 @@ app.get("/vehicles", (req, res) => {
                 connected: 270,
                 softwareUpdates: 970,
                 vin: "1GKFK16K0RJ736886",
-                img: "https://api-projeto-final-2-0.onrender.com/territory.png"
+                img: `${baseUrl}/territory.png`
             },
             {
                 id: 4,
@@ -76,7 +77,7 @@ app.get("/vehicles", (req, res) => {
                 connected: 310,
                 softwareUpdates: 290,
                 vin: "JH4DA9350PS016433",
-                img: "https://api-projeto-final-2-0.onrender.com/broncoSport.png"
+                img: `${baseUrl}/broncoSport.png`
             }
         ];
 
@@ -149,5 +150,6 @@ app.post("/vehicleData", (req, res) => {
 })
 
 app.listen(3001, () => {
-    console.log("https://api-projeto-final-2-0.onrender.com/");
+    const baseUrl = `${req.protocol}://${req.get("host")}`;
+    console.log(`${baseUrl}`);
 });
