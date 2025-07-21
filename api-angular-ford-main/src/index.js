@@ -41,7 +41,7 @@ app.post("/login", (req, res) => {
 
 app.get("/vehicles", (req, res) => {
     try {
-        const baseUrl = `${req.protocol}://${req.get("host")}`;
+        const baseUrl = `${req.protocol}://${req.get("host")}`;  // usa o localhost para substituir as img 
         const vehicles = [
             {
                 id: 1,
@@ -81,7 +81,7 @@ app.get("/vehicles", (req, res) => {
             }
         ];
 
-        return res.status(200).json({ ...vehicles });
+        return res.status(200).json(vehicles);
 
     } catch (error) {
         return res.status(500).json({
@@ -150,6 +150,5 @@ app.post("/vehicleData", (req, res) => {
 })
 
 app.listen(3001, () => {
-    const baseUrl = `${req.protocol}://${req.get("host")}`;
-    console.log(`${baseUrl}`);
+    console.log("https://api-projeto-final-2-0.onrender.com/");
 });
