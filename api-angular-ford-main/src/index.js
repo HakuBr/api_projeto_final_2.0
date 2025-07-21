@@ -81,7 +81,7 @@ app.get("/vehicles", (req, res) => {
             }
         ];
 
-        return res.status(200).json(vehicles);
+        return res.status(200).json({ ...vehicles });
 
     } catch (error) {
         return res.status(500).json({
